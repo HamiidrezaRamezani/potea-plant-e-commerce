@@ -40,7 +40,7 @@ class _SplashScreenState extends State<SplashScreen> {
               height: 250.0,
               child: Center(
                 child: CircularProgressIndicator(
-                  color: AppColors.primaryColor,
+                  color: AppColors.primary500Color,
                 ),
               )
             )
