@@ -12,8 +12,10 @@ dependencies:
   flutter:
     sdk: flutter
 
+  csv: ^5.1.1
   lottie: ^3.0.0
   cupertino_icons: ^1.0.2
+  intl: ^0.19.0
 
 dev_dependencies:
   flutter_test:
@@ -28,6 +30,7 @@ flutter:
   assets:
     - assets/images/png/logo.png
     - assets/images/png/welcome_page_image.png
+    - assets/username.csv
 
 
   fonts:
@@ -43,3 +46,9 @@ flutter:
     - family: urbanistBold
       fonts:
         - asset: assets/fonts/en/Urbanist-Bold.ttf
+    - family: iranYekanRegular
+      fonts:
+        - asset: assets/fonts/fa/iranYekanRegular.ttf
+    - family: iranYekanBold
+      fonts:
+        - asset: assets/fonts/fa/iranYekanBold.ttf
