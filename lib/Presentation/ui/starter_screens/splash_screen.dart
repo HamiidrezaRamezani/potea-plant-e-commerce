@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-
-import '../../../DesignSystem/colors/app_colors.dart';
+import 'package:lottie/lottie.dart';
+import 'package:potea_plant_e_commerce/DesignSystem/animations/lotties/app_lottie_animations.dart';
 import 'welcome_page.dart';
 
 class SplashScreen extends StatefulWidget {
@@ -19,9 +19,10 @@ class _SplashScreenState extends State<SplashScreen> {
 
   Future<void> navigateToNextPage() async {
     await Future.delayed(const Duration(seconds: 3));
+    // ignore: use_build_context_synchronously
     Navigator.pushReplacement(
       context,
-      MaterialPageRoute(builder: (context) => WelcomePage()),
+      MaterialPageRoute(builder: (context) => const WelcomePage()),
     );
   }
 
@@ -39,9 +40,7 @@ class _SplashScreenState extends State<SplashScreen> {
             child: SizedBox(
               height: 250.0,
               child: Center(
-                child: CircularProgressIndicator(
-                  color: AppColors.primary500Color,
-                ),
+                child: Lottie.asset(AppLottieAnimations.appLoading, height: 120.0)
               )
             )
           )
