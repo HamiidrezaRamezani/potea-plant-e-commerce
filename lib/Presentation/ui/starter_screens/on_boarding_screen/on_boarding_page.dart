@@ -4,6 +4,7 @@ import 'package:potea_plant_e_commerce/DesignSystem/buttons/app_buttons.dart';
 import 'package:potea_plant_e_commerce/DesignSystem/colors/app_colors.dart';
 import 'package:potea_plant_e_commerce/DesignSystem/images/app_images.dart';
 import 'package:potea_plant_e_commerce/DesignSystem/padding/app_padding.dart';
+import 'package:potea_plant_e_commerce/Presentation/ui/authentication_screens/login/login_page.dart';
 import 'package:potea_plant_e_commerce/Presentation/ui/starter_screens/on_boarding_screen/on_boarding_items.dart';
 
 class OnBoardingPage extends StatefulWidget {
@@ -55,10 +56,13 @@ class _OnBoardingPageState extends State<OnBoardingPage> {
                 InkWell(
                   onTap: () {
                     pageController
-                        .jumpToPage(_currentPage + 1); // انتقال به صفحه بعدی
+                        .jumpToPage(_currentPage + 1);
+                    if(_currentPage >= 2){
+                      Navigator.push(context, MaterialPageRoute(builder: (context)=> LoginPage()));
+                    }
                   },
                   borderRadius: const BorderRadius.all(Radius.circular(35.0)),
-                  child: AppButtons.buttonWithoutIcon('Next', 65.0, 56.0,
+                  child: AppButtons.buttonWithoutIcon((_currentPage == 2)?'Get Started':'Next', (_currentPage == 2)?120:65.0, 56.0,
                       AppColors.white, 35.0, AppColors.primary500Color),
                 ),
                 0.0,

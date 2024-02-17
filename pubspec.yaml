@@ -17,6 +17,7 @@ dependencies:
   cupertino_icons: ^1.0.2
   intl: ^0.18.1
   dots_indicator: ^3.0.0
+  flutter_svg: ^2.0.9
 
 dev_dependencies:
   flutter_test:
@@ -68,7 +69,110 @@ flutter:
     - assets/images/plants/png/Plant34.png
     - assets/images/plants/png/Plant35.png
     - assets/images/plants/png/Plant36.png
-
+    - assets/images/png/loginVector.png
+    - assets/icons/svg/light(border)/2 User.svg
+    - assets/icons/svg/light(border)/3 User.svg
+    - assets/icons/svg/light(border)/Activity.svg
+    - assets/icons/svg/light(border)/Add User.svg
+    - assets/icons/svg/light(border)/Arrow - Down.svg
+    - assets/icons/svg/light(border)/Arrow - Down Circle.svg
+    - assets/icons/svg/light(border)/Arrow - Down Square.svg
+    - assets/icons/svg/light(border)/Arrow - Down 2.svg
+    - assets/icons/svg/light(border)/Arrow - Down 3.svg
+    - assets/icons/svg/light(border)/Arrow - Left.svg
+    - assets/icons/svg/light(border)/Arrow - Left Circle.svg
+    - assets/icons/svg/light(border)/Arrow - Left Square.svg
+    - assets/icons/svg/light(border)/Arrow - Left 2.svg
+    - assets/icons/svg/light(border)/Arrow - Left 3.svg
+    - assets/icons/svg/light(border)/Arrow - Right.svg
+    - assets/icons/svg/light(border)/Arrow - Right Circle.svg
+    - assets/icons/svg/light(border)/Arrow - Right Square.svg
+    - assets/icons/svg/light(border)/Arrow - Right 2.svg
+    - assets/icons/svg/light(border)/Arrow - Right 3.svg
+    - assets/icons/svg/light(border)/Arrow - Up.svg
+    - assets/icons/svg/light(border)/Arrow - Up Circle.svg
+    - assets/icons/svg/light(border)/Arrow - Up Square.svg
+    - assets/icons/svg/light(border)/Arrow - Up 2.svg
+    - assets/icons/svg/light(border)/Arrow - Up 3.svg
+    - assets/icons/svg/light(border)/Bag.svg
+    - assets/icons/svg/light(border)/Bag 3.svg
+    - assets/icons/svg/light(border)/Bookmark.svg
+    - assets/icons/svg/light(border)/Buy.svg
+    - assets/icons/svg/light(border)/Calendar.svg
+    - assets/icons/svg/light(border)/Call.svg
+    - assets/icons/svg/light(border)/Call Missed.svg
+    - assets/icons/svg/light(border)/Call Silent.svg
+    - assets/icons/svg/light(border)/Calling.svg
+    - assets/icons/svg/light(border)/Camera.svg
+    - assets/icons/svg/light(border)/Category.svg
+    - assets/icons/svg/light(border)/Chart.svg
+    - assets/icons/svg/light(border)/Chat.svg
+    - assets/icons/svg/light(border)/Close Square.svg
+    - assets/icons/svg/light(border)/Danger Circle.svg
+    - assets/icons/svg/light(border)/Danger Triangle.svg
+    - assets/icons/svg/light(border)/Delete.svg
+    - assets/icons/svg/light(border)/Discount.svg
+    - assets/icons/svg/light(border)/Discovery.svg
+    - assets/icons/svg/light(border)/Document.svg
+    - assets/icons/svg/light(border)/Download.svg
+    - assets/icons/svg/light(border)/Edit.svg
+    - assets/icons/svg/light(border)/Edit Square.svg
+    - assets/icons/svg/light(border)/Filter.svg
+    - assets/icons/svg/light(border)/Filter 3.svg
+    - assets/icons/svg/light(border)/Folder.svg
+    - assets/icons/svg/light(border)/Game.svg
+    - assets/icons/svg/light(border)/Graph.svg
+    - assets/icons/svg/light(border)/Heart.svg
+    - assets/icons/svg/light(border)/Hide.svg
+    - assets/icons/svg/light(border)/Home.svg
+    - assets/icons/svg/light(border)/Image.svg
+    - assets/icons/svg/light(border)/Image 3.svg
+    - assets/icons/svg/light(border)/Info Square.svg
+    - assets/icons/svg/light(border)/Location.svg
+    - assets/icons/svg/light(border)/Lock.svg
+    - assets/icons/svg/light(border)/Login.svg
+    - assets/icons/svg/light(border)/Logout.svg
+    - assets/icons/svg/light(border)/Message.svg
+    - assets/icons/svg/light(border)/More Circle.svg
+    - assets/icons/svg/light(border)/More Square.svg
+    - assets/icons/svg/light(border)/Notification.svg
+    - assets/icons/svg/light(border)/Paper.svg
+    - assets/icons/svg/light(border)/Paper Download.svg
+    - assets/icons/svg/light(border)/Paper Fail.svg
+    - assets/icons/svg/light(border)/Paper Negative.svg
+    - assets/icons/svg/light(border)/Paper Plus.svg
+    - assets/icons/svg/light(border)/Paper Upload.svg
+    - assets/icons/svg/light(border)/Password.svg
+    - assets/icons/svg/light(border)/Play.svg
+    - assets/icons/svg/light(border)/Plus.svg
+    - assets/icons/svg/light(border)/Profile.svg
+    - assets/icons/svg/light(border)/Scan.svg
+    - assets/icons/svg/light(border)/Search.svg
+    - assets/icons/svg/light(border)/Send.svg
+    - assets/icons/svg/light(border)/Setting.svg
+    - assets/icons/svg/light(border)/Shield Done.svg
+    - assets/icons/svg/light(border)/Shield Fail.svg
+    - assets/icons/svg/light(border)/Show.svg
+    - assets/icons/svg/light(border)/Star.svg
+    - assets/icons/svg/light(border)/Swap.svg
+    - assets/icons/svg/light(border)/Tick Square.svg
+    - assets/icons/svg/light(border)/Ticket.svg
+    - assets/icons/svg/light(border)/Ticket Star.svg
+    - assets/icons/svg/light(border)/Time Circle.svg
+    - assets/icons/svg/light(border)/Time Square.svg
+    - assets/icons/svg/light(border)/Unlock.svg
+    - assets/icons/svg/light(border)/Upload.svg
+    - assets/icons/svg/light(border)/Video.svg
+    - assets/icons/svg/light(border)/Voice.svg
+    - assets/icons/svg/light(border)/Voice 3.svg
+    - assets/icons/svg/light(border)/Volume Down.svg
+    - assets/icons/svg/light(border)/Volume Off.svg
+    - assets/icons/svg/light(border)/Volume Up.svg
+    - assets/icons/svg/light(border)/Wallet.svg
+    - assets/icons/svg/light(border)/Work.svg
+    - assets/icons/svg/vector/apple.svg
+    - assets/icons/svg/vector/google.svg
+    - assets/icons/svg/vector/facebook.svg
 
   fonts:
     - family: urbanistRegular
