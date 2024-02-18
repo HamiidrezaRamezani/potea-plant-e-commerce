@@ -1,0 +1,4 @@
+class AppInput{
+  AppInput._();
+
+}

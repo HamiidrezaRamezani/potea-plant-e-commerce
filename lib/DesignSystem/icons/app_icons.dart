@@ -70,16 +70,16 @@ class AppIcons {
   static String game = 'assets/icons/svg/light(border)/Game.svg';
   static String graph = 'assets/icons/svg/light(border)/Graph.svg';
   static String heart = 'assets/icons/svg/light(border)/Heart.svg';
-  static String hide = 'assets/icons/svg/light(border)/Hide.svg';
+  static String hide = 'assets/icons/svg/light(border)/hideIcon.svg';
   static String home = 'assets/icons/svg/light(border)/Home.svg';
   static String image = 'assets/icons/svg/light(border)/Image.svg';
   static String image3 = 'assets/icons/svg/light(border)/Image 3.svg';
   static String infoSquare = 'assets/icons/svg/light(border)/Info Square.svg';
   static String location = 'assets/icons/svg/light(border)/Location.svg';
-  static String lock = 'assets/icons/svg/light(border)/Lock.svg';
+  static String lock = 'assets/icons/svg/light(border)/lockIcon.svg';
   static String login = 'assets/icons/svg/light(border)/Login.svg';
   static String logout = 'assets/icons/svg/light(border)/Logout.svg';
-  static String message = 'assets/icons/svg/light(border)/Message.svg';
+  static String message = 'assets/icons/svg/light(border)/messageIcon.svg';
   static String moreCircle = 'assets/icons/svg/light(border)/More Circle.svg';
   static String moreSquare = 'assets/icons/svg/light(border)/More Square.svg';
   static String notification =
@@ -123,4 +123,7 @@ class AppIcons {
   static String apple = 'assets/icons/svg/vector/apple.svg';
   static String google = 'assets/icons/svg/vector/google.svg';
   static String facebook = 'assets/icons/svg/vector/facebook.svg';
+  static String hideBoldIcon = 'assets/icons/svg/boldIcon/hideIcon.svg';
+  static String lockBoldIcon = 'assets/icons/svg/boldIcon/lockIcon.svg';
+  static String messageBoldIcon = 'assets/icons/svg/boldIcon/messageIcon.svg';
 }

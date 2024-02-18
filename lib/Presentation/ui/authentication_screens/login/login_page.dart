@@ -5,6 +5,7 @@ import 'package:potea_plant_e_commerce/DesignSystem/icons/app_icons.dart';
 import 'package:potea_plant_e_commerce/DesignSystem/images/app_images.dart';
 import 'package:potea_plant_e_commerce/DesignSystem/padding/app_padding.dart';
 import 'package:potea_plant_e_commerce/DesignSystem/size/app_size.dart';
+import 'package:potea_plant_e_commerce/Presentation/ui/authentication_screens/register/register_page.dart';
 
 import '../../../../DesignSystem/colors/app_colors.dart';
 import '../../../../DesignSystem/typography/text_style.dart';
@@ -39,7 +40,7 @@ class _LoginPageState extends State<LoginPage> {
           ),
           Row(
             mainAxisAlignment: MainAxisAlignment.center,
-            children: [TextStyles.heading1('Let,s you in', AppColors.grey900)],
+            children: [TextStyles.heading1("Let's you in", AppColors.grey900)],
           ),
           AppPadding.paddingOnlyWidget(
               AppButtons.buttonWithIcon(
@@ -130,21 +131,27 @@ class _LoginPageState extends State<LoginPage> {
                   AppColors.primary500Color),
               24.0,
               24.0,
-              24.0,
+              20.0,
               0.0),
           AppPadding.paddingOnlyWidget(
               Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
-                  TextStyles.bodyM('Dont have an account?', AppColors.grey500,
+                  TextStyles.bodyM("Don't have an account?", AppColors.grey500,
                       'regular', TextAlign.center),
-                  TextStyles.bodyM('Sign up', AppColors.primary500Color,
-                      'semiBold', TextAlign.center),
+                  const SizedBox(width: 8.0,),
+                  InkWell(
+                    onTap: (){
+                      Navigator.push(context, MaterialPageRoute(builder: (context)=> const RegisterPage()));
+                    },
+                    child: TextStyles.bodyM('Sign up', AppColors.primary500Color,
+                        'semiBold', TextAlign.center),
+                  )
                 ],
               ),
               24.0,
               24.0,
-              20.0,
+              16.0,
               0.0)
         ],
       ),
