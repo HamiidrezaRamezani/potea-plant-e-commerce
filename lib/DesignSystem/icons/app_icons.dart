@@ -51,7 +51,7 @@ class AppIcons {
   static String camera = 'assets/icons/svg/light(border)/Camera.svg';
   static String category = 'assets/icons/svg/light(border)/Category.svg';
   static String chart = 'assets/icons/svg/light(border)/Chart.svg';
-  static String chat = 'assets/icons/svg/light(border)/Chat.svg';
+  static String chat = 'assets/icons/svg/light(border)/chatIcon.svg';
   static String closeSquare = 'assets/icons/svg/light(border)/Close Square.svg';
   static String dangerCircle =
       'assets/icons/svg/light(border)/Danger Circle.svg';
@@ -126,4 +126,5 @@ class AppIcons {
   static String hideBoldIcon = 'assets/icons/svg/boldIcon/hideIcon.svg';
   static String lockBoldIcon = 'assets/icons/svg/boldIcon/lockIcon.svg';
   static String messageBoldIcon = 'assets/icons/svg/boldIcon/messageIcon.svg';
+  static String chatBoldIcon = 'assets/icons/svg/boldIcon/chatIcon.svg';
 }

@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:potea_plant_e_commerce/DesignSystem/size/app_size.dart';
+import 'package:potea_plant_e_commerce/Presentation/ui/reset_password_screens/forget_password_select_page.dart';
 
 import '../../../../DesignSystem/buttons/app_buttons.dart';
 import '../../../../DesignSystem/colors/app_colors.dart';
@@ -21,8 +22,8 @@ class _LoginPageState extends State<LoginPage> {
   bool passwordSelected = false;
   bool passwordObscure = false;
   bool rememberMe = false;
-  FocusNode _userNameFocus = FocusNode();
-  FocusNode _passwordFocus = FocusNode();
+  final FocusNode _userNameFocus = FocusNode();
+  final FocusNode _passwordFocus = FocusNode();
 
 
   @override
@@ -206,8 +207,13 @@ class _LoginPageState extends State<LoginPage> {
           AppPadding.paddingOnlyWidget(Row(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              TextStyles.bodyM("Forgot the password?", AppColors.primary500Color,
-                  'semiBold', TextAlign.center)
+              InkWell(
+                onTap: (){
+                  Navigator.push(context, MaterialPageRoute(builder: (context)=> const ForgetPasswordSelectPage()));
+                },
+                child: TextStyles.bodyL("Forgot the password?", AppColors.primary500Color,
+                    'semiBold', TextAlign.center),
+              )
             ],
           ),24.0, 24.0, 24.0, 0.0),
           AppPadding.paddingOnlyWidget(

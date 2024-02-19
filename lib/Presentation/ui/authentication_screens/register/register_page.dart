@@ -22,8 +22,8 @@ class _RegisterPageState extends State<RegisterPage> {
   bool passwordSelected = false;
   bool passwordObscure = false;
   bool rememberMe = false;
-  FocusNode _userNameFocus = FocusNode();
-  FocusNode _passwordFocus = FocusNode();
+  final FocusNode _userNameFocus = FocusNode();
+  final FocusNode _passwordFocus = FocusNode();
 
 
   @override

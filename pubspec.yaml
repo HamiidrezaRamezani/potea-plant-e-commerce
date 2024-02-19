@@ -71,6 +71,7 @@ flutter:
     - assets/images/plants/png/Plant36.png
     - assets/images/png/loginVector.png
     - assets/images/png/signUpVector.png
+    - assets/images/png/forgotPasswordVector.png
     - assets/icons/svg/light(border)/2 User.svg
     - assets/icons/svg/light(border)/3 User.svg
     - assets/icons/svg/light(border)/Activity.svg
@@ -107,7 +108,7 @@ flutter:
     - assets/icons/svg/light(border)/Camera.svg
     - assets/icons/svg/light(border)/Category.svg
     - assets/icons/svg/light(border)/Chart.svg
-    - assets/icons/svg/light(border)/Chat.svg
+    - assets/icons/svg/light(border)/chat.svg
     - assets/icons/svg/light(border)/Close Square.svg
     - assets/icons/svg/light(border)/Danger Circle.svg
     - assets/icons/svg/light(border)/Danger Triangle.svg
@@ -177,6 +178,7 @@ flutter:
     - assets/icons/svg/boldIcon/hideIcon.svg
     - assets/icons/svg/boldIcon/lockIcon.svg
     - assets/icons/svg/boldIcon/messageIcon.svg
+    - assets/icons/svg/boldIcon/chatIcon.svg
 
   fonts:
     - family: urbanistRegular
