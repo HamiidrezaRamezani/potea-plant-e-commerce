@@ -3,7 +3,6 @@ import 'package:flutter_svg/svg.dart';
 import 'package:potea_plant_e_commerce/DesignSystem/padding/app_padding.dart';
 import 'package:potea_plant_e_commerce/DesignSystem/size/app_size.dart';
 import 'package:potea_plant_e_commerce/Presentation/ui/authentication_screens/login/login_page.dart';
-
 import '../../../../DesignSystem/buttons/app_buttons.dart';
 import '../../../../DesignSystem/colors/app_colors.dart';
 import '../../../../DesignSystem/icons/app_icons.dart';
@@ -18,6 +17,55 @@ class RegisterPage extends StatefulWidget {
 }
 
 class _RegisterPageState extends State<RegisterPage> {
+
+  bool userNameSelected = false;
+  bool passwordSelected = false;
+  bool passwordObscure = false;
+  bool rememberMe = false;
+  FocusNode _userNameFocus = FocusNode();
+  FocusNode _passwordFocus = FocusNode();
+
+
+  @override
+  void initState() {
+    super.initState();
+    _userNameFocus.addListener(_onFocusUserNameChange);
+    _passwordFocus.addListener(_onFocusPasswordChange);
+  }
+
+  @override
+  void dispose() {
+    super.dispose();
+    _userNameFocus.removeListener(_onFocusUserNameChange);
+    _userNameFocus.dispose();
+    _passwordFocus.removeListener(_onFocusPasswordChange);
+    _passwordFocus.dispose();
+  }
+
+  void _onFocusUserNameChange() {
+    if(_userNameFocus.hasFocus == true) {
+      setState(() {
+        userNameSelected = true;
+      });
+    }else {
+      setState(() {
+        userNameSelected = false;
+      });
+    }
+  }
+
+  void _onFocusPasswordChange() {
+    if(_passwordFocus.hasFocus == true) {
+      setState(() {
+        passwordSelected = true;
+      });
+    }else {
+      setState(() {
+        passwordSelected = false;
+      });
+    }
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -50,12 +98,14 @@ class _RegisterPageState extends State<RegisterPage> {
                   width: context.width,
                   decoration: BoxDecoration(
                       borderRadius: const BorderRadius.all(Radius.circular(16.0)),
+                      border: Border.all(color: (userNameSelected == true)?AppColors.primary500Color:AppColors.grey50, width: 1.0),
                       color: AppColors.grey50),
                   child: AppPadding.paddingOnlyWidget(Row(
                     children: [
-                      SvgPicture.asset(AppIcons.messageBoldIcon, color: AppColors.grey500,),
+                      SvgPicture.asset(AppIcons.messageBoldIcon, color: (userNameSelected == true)?AppColors.primary500Color:AppColors.grey500,),
                       const SizedBox(width: 12.0,),
                       Expanded(child: TextField(
+                        focusNode: _userNameFocus,
                         decoration: InputDecoration(
                             border: InputBorder.none,
                             hintText: 'Email',
@@ -78,12 +128,15 @@ class _RegisterPageState extends State<RegisterPage> {
                   width: context.width,
                   decoration: BoxDecoration(
                       borderRadius: const BorderRadius.all(Radius.circular(16.0)),
+                      border: Border.all(color: (passwordSelected == true)?AppColors.primary500Color:AppColors.grey50, width: 1.0),
                       color: AppColors.grey50),
                   child: AppPadding.paddingOnlyWidget(Row(
                     children: [
-                      SvgPicture.asset(AppIcons.lockBoldIcon, color: AppColors.grey500,),
+                      SvgPicture.asset(AppIcons.lockBoldIcon, color: (passwordSelected == true)?AppColors.primary500Color:AppColors.grey500,),
                       const SizedBox(width: 12.0,),
                       Expanded(child: TextField(
+                        focusNode: _passwordFocus,
+                        obscureText: passwordObscure,
                         decoration: InputDecoration(
                             border: InputBorder.none,
                             hintText: 'Password',
@@ -95,7 +148,14 @@ class _RegisterPageState extends State<RegisterPage> {
                         ),
                       ),),
                       const SizedBox(width: 12.0,),
-                      SvgPicture.asset(AppIcons.hideBoldIcon, color: AppColors.grey500,),
+                      InkWell(
+                        onTap: (){
+                          setState(() {
+                            passwordObscure = !passwordObscure;
+                          });
+                        },
+                        child: SvgPicture.asset(AppIcons.hideBoldIcon, color: (passwordSelected == true)?AppColors.primary500Color:AppColors.grey500,),
+                      ),
                     ],
                   ), 20, 20, 0.0, 0.0)),
               24,
@@ -106,12 +166,24 @@ class _RegisterPageState extends State<RegisterPage> {
              Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                Container(
-                  height: 24.0,
-                  width: 24.0,
-                  decoration: BoxDecoration(
-                    borderRadius: const BorderRadius.all(Radius.circular(8.0)),
-                    border: Border.all(width: 3.0, color: AppColors.primary500Color)
+                InkWell(
+                  borderRadius: const BorderRadius.all(Radius.circular(8.0)),
+                  onTap: (){
+                    setState(() {
+                      rememberMe = !rememberMe;
+                    });
+                  },
+                  child: Container(
+                    height: 24.0,
+                    width: 24.0,
+                    decoration: BoxDecoration(
+                      borderRadius: const BorderRadius.all(Radius.circular(8.0)),
+                      border: Border.all(width: 3.0, color: AppColors.primary500Color),
+                      color: (rememberMe == true)? AppColors.primary500Color: AppColors.white
+                    ),
+                    child: (rememberMe == true)?Center(
+                      child: Icon(Icons.check, size: 16.0, color: AppColors.white,),
+                    ):Container(),
                   ),
                 ),
                 const SizedBox(width: 12.0,),
@@ -120,7 +192,6 @@ class _RegisterPageState extends State<RegisterPage> {
             ),
             0.0, 0.0, 20.0, 0.0
           ),
-
           AppPadding.paddingOnlyWidget(
               AppButtons.buttonWithoutIcon(
                   'Sign up',
