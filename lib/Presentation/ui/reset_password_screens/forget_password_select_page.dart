@@ -3,6 +3,7 @@ import 'package:flutter_svg/svg.dart';
 import 'package:potea_plant_e_commerce/DesignSystem/colors/app_colors.dart';
 import 'package:potea_plant_e_commerce/DesignSystem/padding/app_padding.dart';
 import 'package:potea_plant_e_commerce/DesignSystem/size/app_size.dart';
+import 'package:potea_plant_e_commerce/Presentation/ui/reset_password_screens/forgot_password_verify_page.dart';
 
 import '../../../DesignSystem/buttons/app_buttons.dart';
 import '../../../DesignSystem/icons/app_icons.dart';
@@ -169,13 +170,19 @@ class _ForgetPasswordSelectPageState extends State<ForgetPasswordSelectPage> {
             ),
           ), 24.0, 24.0, 24.0, 0.0),
           AppPadding.paddingOnlyWidget(
-              AppButtons.buttonWithoutIcon(
-                  'Continue',
-                  context.width,
-                  58.0,
-                  AppColors.white,
-                  100,
-                  AppColors.primary500Color),
+              InkWell(
+                onTap: (){
+                  Navigator.push(context, MaterialPageRoute(builder: (context)=> const ForgotPasswordVerifyPage()));
+                },
+                borderRadius: const BorderRadius.all(Radius.circular(50.0)),
+                child: AppButtons.buttonWithoutIcon(
+                    'Continue',
+                    context.width,
+                    58.0,
+                    AppColors.white,
+                    100,
+                    AppColors.primary500Color),
+              ),
               24.0,
               24.0,
               33.0,

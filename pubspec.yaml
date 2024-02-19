@@ -18,6 +18,7 @@ dependencies:
   intl: ^0.18.1
   dots_indicator: ^3.0.0
   flutter_svg: ^2.0.9
+  pin_code_fields: ^8.0.1
 
 dev_dependencies:
   flutter_test:
@@ -72,6 +73,8 @@ flutter:
     - assets/images/png/loginVector.png
     - assets/images/png/signUpVector.png
     - assets/images/png/forgotPasswordVector.png
+    - assets/images/png/createNewPasswordVector.png
+    - assets/images/png/congratulationsVector.png
     - assets/icons/svg/light(border)/2 User.svg
     - assets/icons/svg/light(border)/3 User.svg
     - assets/icons/svg/light(border)/Activity.svg
