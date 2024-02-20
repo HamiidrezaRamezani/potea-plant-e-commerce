@@ -127,4 +127,5 @@ class AppIcons {
   static String lockBoldIcon = 'assets/icons/svg/boldIcon/lockIcon.svg';
   static String messageBoldIcon = 'assets/icons/svg/boldIcon/messageIcon.svg';
   static String chatBoldIcon = 'assets/icons/svg/boldIcon/chatIcon.svg';
+  static String starBoldIcon = 'assets/icons/svg/boldIcon/starIcon.svg';
 }

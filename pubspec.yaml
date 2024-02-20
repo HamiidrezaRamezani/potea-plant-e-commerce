@@ -75,6 +75,7 @@ flutter:
     - assets/images/png/forgotPasswordVector.png
     - assets/images/png/createNewPasswordVector.png
     - assets/images/png/congratulationsVector.png
+    - assets/images/png/avatar.png
     - assets/icons/svg/light(border)/2 User.svg
     - assets/icons/svg/light(border)/3 User.svg
     - assets/icons/svg/light(border)/Activity.svg
@@ -182,6 +183,7 @@ flutter:
     - assets/icons/svg/boldIcon/lockIcon.svg
     - assets/icons/svg/boldIcon/messageIcon.svg
     - assets/icons/svg/boldIcon/chatIcon.svg
+    - assets/icons/svg/boldIcon/starIcon.svg
 
   fonts:
     - family: urbanistRegular
