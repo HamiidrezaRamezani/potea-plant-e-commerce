@@ -133,4 +133,5 @@ class AppIcons {
   static String locationBoldIcon = 'assets/icons/svg/boldIcon/locationIcon.svg';
   static String profileBoldIcon = 'assets/icons/svg/boldIcon/profileIcon.svg';
   static String walletBoldIcon = 'assets/icons/svg/boldIcon/walletIcon.svg';
+  static String heartBoldIcon = 'assets/icons/svg/boldIcon/heartIcon.svg';
 }

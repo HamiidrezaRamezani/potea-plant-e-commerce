@@ -5,6 +5,7 @@ class ProductModelUi {
   String status;
   String rate;
   String slug;
+  bool isPopular;
 
   ProductModelUi(
       {required this.image,
@@ -12,5 +13,6 @@ class ProductModelUi {
       required this.price,
       required this.rate,
       required this.status,
-      required this.slug});
+      required this.slug,
+      required this.isPopular});
 }

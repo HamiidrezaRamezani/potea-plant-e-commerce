@@ -19,7 +19,6 @@ class HomePage extends StatefulWidget {
 }
 
 class _HomePageState extends State<HomePage> {
-
   int selectedTagIndex = 0;
 
   List<ProductModelUi> specialProductList = [
@@ -29,21 +28,24 @@ class _HomePageState extends State<HomePage> {
         price: '29',
         rate: '4.8',
         status: '4,268 Sold',
-        slug: 'special'),
+        slug: 'special',
+        isPopular: false),
     ProductModelUi(
         image: AppImages.plant08,
         title: 'ZZ Plant',
         price: '25',
         rate: '4.7',
         status: '3,884 Sold',
-        slug: 'special'),
+        slug: 'special',
+        isPopular: false),
     ProductModelUi(
         image: AppImages.plant11,
         title: 'Elon Plant',
         price: '50',
         rate: '4.9',
         status: '5,874 Sold',
-        slug: 'special'),
+        slug: 'special',
+        isPopular: false),
   ];
 
   List<ProductModelUi> popularProductList = [
@@ -53,42 +55,48 @@ class _HomePageState extends State<HomePage> {
         price: '29',
         rate: '4.8',
         status: '4,268 Sold',
-        slug: 'special'),
+        slug: 'special',
+        isPopular: false),
     ProductModelUi(
         image: AppImages.plant08,
         title: 'ZZ Plant',
         price: '25',
         rate: '4.7',
         status: '3,884 Sold',
-        slug: 'special'),
+        slug: 'special',
+        isPopular: false),
     ProductModelUi(
         image: AppImages.plant11,
         title: 'Elon Plant',
         price: '50',
         rate: '4.9',
         status: '5,874 Sold',
-        slug: 'special'),
+        slug: 'special',
+        isPopular: false),
     ProductModelUi(
         image: AppImages.plant25,
         title: 'Plant Two',
         price: '50',
         rate: '4.9',
         status: '5,874 Sold',
-        slug: 'special'),
+        slug: 'special',
+        isPopular: false),
     ProductModelUi(
         image: AppImages.plant35,
         title: 'Plant 15',
         price: '50',
         rate: '4.9',
         status: '5,874 Sold',
-        slug: 'special'),
+        slug: 'special',
+        isPopular: false),
     ProductModelUi(
         image: AppImages.plant15,
         title: 'Plant eleven',
         price: '50',
         rate: '4.9',
         status: '5,874 Sold',
-        slug: 'special'),
+        slug: 'special',
+        isPopular: false),
   ];
 
   List<String> tags = [
@@ -99,10 +107,8 @@ class _HomePageState extends State<HomePage> {
     'Yucca',
   ];
 
-
   @override
   Widget build(BuildContext context) {
-
     final double itemHeight = (context.height - kToolbarHeight - 24) / 1.7;
     final double itemWidth = context.width / 1.8;
 
@@ -149,8 +155,12 @@ class _HomePageState extends State<HomePage> {
                       width: 16.0,
                     ),
                     InkWell(
-                      onTap: (){
-                        Navigator.push(context, MaterialPageRoute(builder: (context)=> const NotificationPage()));
+                      onTap: () {
+                        Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) =>
+                                    const NotificationPage()));
                       },
                       child: SvgPicture.asset(AppIcons.notification),
                     ),
@@ -214,8 +224,7 @@ class _HomePageState extends State<HomePage> {
                   Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
-                      TextStyles.heading5(
-                          'Special Offers', AppColors.grey900),
+                      TextStyles.heading5('Special Offers', AppColors.grey900),
                       TextStyles.bodyL('See All', AppColors.primary500Color,
                           'bold', TextAlign.center),
                     ],
@@ -239,7 +248,16 @@ class _HomePageState extends State<HomePage> {
                                     specialProductList[index].title,
                                     specialProductList[index].rate,
                                     specialProductList[index].status,
-                                    specialProductList[index].price),
+                                    specialProductList[index].price,
+                                    specialProductList[index].isPopular,
+                                    (){
+                                      WidgetsBinding.instance.addPostFrameCallback((_){
+                                        setState(() {
+                                          specialProductList[index].isPopular = !specialProductList[index].isPopular;
+                                        });
+                                      });
+                                    }
+                                ),
                               ),
                               16.0,
                               0.0,
@@ -256,80 +274,115 @@ class _HomePageState extends State<HomePage> {
 
           // Most Popular
           AppPadding.paddingOnlyWidget(
-              Container(
-                child: Column(
-                  children: [
-                    Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                      children: [
-                        TextStyles.heading5('Most Popular', AppColors.grey900),
-                        TextStyles.bodyL('See All', AppColors.primary500Color,
-                            'bold', TextAlign.center),
-                      ],
-                    ),
-                    const SizedBox(
-                      height: 24.0,
-                    ),
-                    AppPadding.paddingOnlyWidget(Container(
-                      height: 40.0,
-                      width: context.width,
-                      child: ListView.builder(
-                          scrollDirection: Axis.horizontal,
-                          itemCount: tags.length,
-                          itemBuilder: (BuildContext context , int index){
-                        return AppPadding.paddingOnlyWidget(
-                          InkWell(
-                            borderRadius: const BorderRadius.all(Radius.circular(25.0)),
-                            onTap: (){
-                              setState(() {
-                                selectedTagIndex = index;
-                              });
-                            },
-                            child: Container(
-                              height: 40.0,
-                              decoration: BoxDecoration(
-                                color: (selectedTagIndex == index)?AppColors.primary500Color: AppColors.white,
-                                border: Border.all(
-                                  width: 2.0,
-                                  color: AppColors.primary500Color,
-                                ),
-                                borderRadius: const BorderRadius.all(Radius.circular(25.0))
+              Column(
+                children: [
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
+                      TextStyles.heading5('Most Popular', AppColors.grey900),
+                      TextStyles.bodyL('See All', AppColors.primary500Color,
+                          'bold', TextAlign.center),
+                    ],
+                  ),
+                  const SizedBox(
+                    height: 24.0,
+                  ),
+                  AppPadding.paddingOnlyWidget(
+                      SizedBox(
+                        height: 40.0,
+                        width: context.width,
+                        child: ListView.builder(
+                            scrollDirection: Axis.horizontal,
+                            itemCount: tags.length,
+                            itemBuilder: (BuildContext context, int index) {
+                              return AppPadding.paddingOnlyWidget(
+                                  InkWell(
+                                    borderRadius: const BorderRadius.all(
+                                        Radius.circular(25.0)),
+                                    onTap: () {
+                                      setState(() {
+                                        selectedTagIndex = index;
+                                      });
+                                    },
+                                    child: Container(
+                                      height: 40.0,
+                                      decoration: BoxDecoration(
+                                          color: (selectedTagIndex == index)
+                                              ? AppColors.primary500Color
+                                              : AppColors.white,
+                                          border: Border.all(
+                                            width: 2.0,
+                                            color: AppColors.primary500Color,
+                                          ),
+                                          borderRadius: const BorderRadius.all(
+                                              Radius.circular(25.0))),
+                                      child: Center(
+                                          child: AppPadding.paddingOnlyWidget(
+                                              TextStyles.bodyL(
+                                                  tags[index],
+                                                  (selectedTagIndex == index)
+                                                      ? AppColors.white
+                                                      : AppColors
+                                                          .primary500Color,
+                                                  'semiBold',
+                                                  TextAlign.center),
+                                              20.0,
+                                              20.0,
+                                              0.0,
+                                              0.0)),
+                                    ),
+                                  ),
+                                  0.0,
+                                  12.0,
+                                  0.0,
+                                  0.0);
+                            }),
+                      ),
+                      0.0,
+                      0.0,
+                      0.0,
+                      0.0),
+                  const SizedBox(
+                    height: 24.0,
+                  ),
+                  SizedBox(
+                    width: context.width,
+                    child: GridView.builder(
+                        itemCount: popularProductList.length,
+                        scrollDirection: Axis.vertical,
+                        physics: const NeverScrollableScrollPhysics(),
+                        gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+                          crossAxisCount: 2,
+                          crossAxisSpacing: 16.0,
+                          childAspectRatio: (itemWidth / itemHeight),
+                        ),
+                        shrinkWrap: true,
+                        itemBuilder: (BuildContext context, int index) {
+                          return AppPadding.paddingOnlyWidget(
+                              SizedBox(
+                                width: 240.0,
+                                child: AppProduct.popularProduct(
+                                    popularProductList[index].image,
+                                    popularProductList[index].title,
+                                    popularProductList[index].rate,
+                                    popularProductList[index].status,
+                                    popularProductList[index].price,
+                                    popularProductList[index].isPopular,
+                                        (){
+                                      WidgetsBinding.instance.addPostFrameCallback((_){
+                                        setState(() {
+                                          popularProductList[index].isPopular = !popularProductList[index].isPopular;
+                                        });
+                                      });
+                                    }),
                               ),
-                              child: Center(
-                                child: AppPadding.paddingOnlyWidget(TextStyles.bodyL(tags[index], (selectedTagIndex == index)?AppColors.white:AppColors.primary500Color, 'semiBold', TextAlign.center), 20.0, 20.0, 0.0, 0.0)
-                              ),
-                            ),
-                          ),
-                          0.0, 12.0, 0.0, 0.0
-                        );
-                      }),
-                    ), 0.0, 0.0, 0.0, 0.0),
-                    const SizedBox(
-                      height: 24.0,
-                    ),
-                    SizedBox(
-                      width: context.width,
-                      child: GridView.builder(
-                          itemCount: popularProductList.length,
-                          scrollDirection: Axis.vertical,
-                          physics: const NeverScrollableScrollPhysics(),
-                          gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(crossAxisCount: 2, crossAxisSpacing: 16.0,
-                            childAspectRatio: (itemWidth / itemHeight),),
-                          shrinkWrap: true,
-                          itemBuilder: (BuildContext context, int index) {
-                            return AppPadding.paddingOnlyWidget(
-                                Container(
-                                  width: 240.0,
-                                  child: AppProduct.popularProduct(popularProductList[index].image, popularProductList[index].title, popularProductList[index].rate, popularProductList[index].status, popularProductList[index].price),
-                                ),
-                                0.0,
-                                0.0,
-                                0.0,
-                                0.0);
-                          }),
-                    ),
-                  ],
-                ),
+                              0.0,
+                              0.0,
+                              0.0,
+                              0.0);
+                        }),
+                  ),
+                ],
               ),
               24.0,
               24.0,

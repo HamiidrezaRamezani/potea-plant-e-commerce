@@ -189,6 +189,7 @@ flutter:
     - assets/icons/svg/boldIcon/locationIcon.svg
     - assets/icons/svg/boldIcon/profileIcon.svg
     - assets/icons/svg/boldIcon/walletIcon.svg
+    - assets/icons/svg/boldIcon/heartIcon.svg
 
   fonts:
     - family: urbanistRegular
