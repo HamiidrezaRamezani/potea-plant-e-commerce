@@ -4,6 +4,8 @@ import 'package:potea_plant_e_commerce/DesignSystem/colors/app_colors.dart';
 import 'package:potea_plant_e_commerce/DesignSystem/padding/app_padding.dart';
 import 'package:potea_plant_e_commerce/DesignSystem/size/app_size.dart';
 import 'package:potea_plant_e_commerce/Presentation/ui/index_screens/notification_screen/notification_page.dart';
+import 'package:potea_plant_e_commerce/Presentation/ui/index_screens/popular_screen/popular_page.dart';
+import 'package:potea_plant_e_commerce/Presentation/ui/index_screens/washlist_screens/washlist_page.dart';
 
 import '../../../../DesignSystem/icons/app_icons.dart';
 import '../../../../DesignSystem/images/app_images.dart';
@@ -167,7 +169,16 @@ class _HomePageState extends State<HomePage> {
                     const SizedBox(
                       width: 16.0,
                     ),
-                    SvgPicture.asset(AppIcons.heart),
+                    InkWell(
+                      onTap: (){
+                        Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) =>
+                                const WashListPage()));
+                      },
+                      child: SvgPicture.asset(AppIcons.heart),
+                    )
                   ],
                 ),
               ),
@@ -280,8 +291,13 @@ class _HomePageState extends State<HomePage> {
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
                       TextStyles.heading5('Most Popular', AppColors.grey900),
-                      TextStyles.bodyL('See All', AppColors.primary500Color,
-                          'bold', TextAlign.center),
+                      InkWell(
+                        onTap: (){
+                          Navigator.push(context, MaterialPageRoute(builder: (context)=> const MostPopularPage()));
+                        },
+                        child: TextStyles.bodyL('See All', AppColors.primary500Color,
+                            'bold', TextAlign.center),
+                      )
                     ],
                   ),
                   const SizedBox(
