@@ -17,7 +17,7 @@ class AppProduct{
           height: 240.0,
           width: 240.0,
           decoration: BoxDecoration(
-              color: AppColors.white,
+              color: AppColors.silver1,
               borderRadius:
               const BorderRadius.all(
                   Radius.circular(38.0))),
@@ -115,10 +115,10 @@ class AppProduct{
     return Column(
       children: [
         Container(
-          height: 240.0,
-          width: 240.0,
+          height: 180.0,
+          width: 180.0,
           decoration: BoxDecoration(
-              color: AppColors.white,
+              color: AppColors.silver1,
               borderRadius:
               const BorderRadius.all(
                   Radius.circular(38.0))),

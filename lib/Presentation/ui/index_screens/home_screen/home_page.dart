@@ -3,6 +3,7 @@ import 'package:flutter_svg/flutter_svg.dart';
 import 'package:potea_plant_e_commerce/DesignSystem/colors/app_colors.dart';
 import 'package:potea_plant_e_commerce/DesignSystem/padding/app_padding.dart';
 import 'package:potea_plant_e_commerce/DesignSystem/size/app_size.dart';
+import 'package:potea_plant_e_commerce/Presentation/ui/index_screens/notification_screen/notification_page.dart';
 
 import '../../../../DesignSystem/icons/app_icons.dart';
 import '../../../../DesignSystem/images/app_images.dart';
@@ -103,7 +104,7 @@ class _HomePageState extends State<HomePage> {
   Widget build(BuildContext context) {
 
     final double itemHeight = (context.height - kToolbarHeight - 24) / 1.7;
-    final double itemWidth = context.width / 2;
+    final double itemWidth = context.width / 1.8;
 
     return Scaffold(
       backgroundColor: AppColors.white,
@@ -147,7 +148,12 @@ class _HomePageState extends State<HomePage> {
                     const SizedBox(
                       width: 16.0,
                     ),
-                    SvgPicture.asset(AppIcons.notification),
+                    InkWell(
+                      onTap: (){
+                        Navigator.push(context, MaterialPageRoute(builder: (context)=> const NotificationPage()));
+                      },
+                      child: SvgPicture.asset(AppIcons.notification),
+                    ),
                     const SizedBox(
                       width: 16.0,
                     ),
@@ -316,7 +322,7 @@ class _HomePageState extends State<HomePage> {
                                   width: 240.0,
                                   child: AppProduct.popularProduct(popularProductList[index].image, popularProductList[index].title, popularProductList[index].rate, popularProductList[index].status, popularProductList[index].price),
                                 ),
-                                16.0,
+                                0.0,
                                 0.0,
                                 0.0,
                                 0.0);

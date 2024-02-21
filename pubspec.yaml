@@ -184,6 +184,11 @@ flutter:
     - assets/icons/svg/boldIcon/messageIcon.svg
     - assets/icons/svg/boldIcon/chatIcon.svg
     - assets/icons/svg/boldIcon/starIcon.svg
+    - assets/icons/svg/boldIcon/creditIcon.svg
+    - assets/icons/svg/boldIcon/discountIcon.svg
+    - assets/icons/svg/boldIcon/locationIcon.svg
+    - assets/icons/svg/boldIcon/profileIcon.svg
+    - assets/icons/svg/boldIcon/walletIcon.svg
 
   fonts:
     - family: urbanistRegular
