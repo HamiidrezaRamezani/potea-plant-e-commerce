@@ -75,6 +75,7 @@ flutter:
     - assets/images/png/forgotPasswordVector.png
     - assets/images/png/createNewPasswordVector.png
     - assets/images/png/congratulationsVector.png
+    - assets/images/png/cartNotFoundVector.png
     - assets/images/png/avatar.png
     - assets/icons/svg/light(border)/2 User.svg
     - assets/icons/svg/light(border)/3 User.svg

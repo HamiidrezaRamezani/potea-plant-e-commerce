@@ -44,4 +44,5 @@ class AppImages {
   static String createNewPasswordVector = 'assets/images/png/createNewPasswordVector.png';
   static String congratulationsVector = 'assets/images/png/congratulationsVector.png';
   static String avatar = 'assets/images/png/avatar.png';
+  static String cartNotFoundVector = 'assets/images/png/cartNotFoundVector.png';
 }
