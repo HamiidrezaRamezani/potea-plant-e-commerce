@@ -128,7 +128,7 @@ class _MyCartPageState extends State<MyCartPage> {
               ],
             ),
       bottomSheet: Container(
-          height: 192.0,
+          height: 100.0,
           width: context.width,
           decoration: BoxDecoration(
               color: AppColors.white,
@@ -170,7 +170,7 @@ class _MyCartPageState extends State<MyCartPage> {
                               AppColors.primary500Color,
                               0.0,
                               AppColors.white,
-                              AppIcons.arrowRight3))
+                              AppIcons.arrowRightBold))
                     ],
                   ),
                   24.0,

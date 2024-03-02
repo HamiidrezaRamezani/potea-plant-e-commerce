@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:potea_plant_e_commerce/Presentation/ui/index_screens/cart_order_checkout_screens/my_cart_page.dart';
 import 'package:potea_plant_e_commerce/Presentation/ui/index_screens/home_screen/home_page.dart';
+import 'package:potea_plant_e_commerce/Presentation/ui/index_screens/index/index_page.dart';
 
 import 'Presentation/ui/starter_screens/splash_screen.dart';
 
@@ -21,7 +22,7 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),
-      home: const MyCartPage(),
+      home: const IndexPage(),
     );
   }
 }

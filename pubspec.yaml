@@ -191,6 +191,17 @@ flutter:
     - assets/icons/svg/boldIcon/profileIcon.svg
     - assets/icons/svg/boldIcon/walletIcon.svg
     - assets/icons/svg/boldIcon/heartIcon.svg
+    - assets/icons/svg/indexIcon/Bag.svg
+    - assets/icons/svg/indexIcon/BagBold.svg
+    - assets/icons/svg/indexIcon/Buy.svg
+    - assets/icons/svg/indexIcon/BuyBold.svg
+    - assets/icons/svg/indexIcon/Home.svg
+    - assets/icons/svg/indexIcon/HomeBold.svg
+    - assets/icons/svg/indexIcon/Profile.svg
+    - assets/icons/svg/indexIcon/ProfileBold.svg
+    - assets/icons/svg/indexIcon/Wallet.svg
+    - assets/icons/svg/indexIcon/WalletBold.svg
+    - assets/icons/svg/boldIcon/arrowRightBold.svg
 
   fonts:
     - family: urbanistRegular

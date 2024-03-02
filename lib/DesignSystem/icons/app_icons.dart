@@ -134,4 +134,15 @@ class AppIcons {
   static String profileBoldIcon = 'assets/icons/svg/boldIcon/profileIcon.svg';
   static String walletBoldIcon = 'assets/icons/svg/boldIcon/walletIcon.svg';
   static String heartBoldIcon = 'assets/icons/svg/boldIcon/heartIcon.svg';
+  static String bagIndexIcon = 'assets/icons/svg/indexIcon/Bag.svg';
+  static String bagBoldIndexIcon = 'assets/icons/svg/indexIcon/BagBold.svg';
+  static String buyIndexIcon = 'assets/icons/svg/indexIcon/Buy.svg';
+  static String buyBoldIndexIcon = 'assets/icons/svg/indexIcon/BuyBold.svg';
+  static String homeIndexIcon = 'assets/icons/svg/indexIcon/Home.svg';
+  static String homeBoldIndexIcon = 'assets/icons/svg/indexIcon/HomeBold.svg';
+  static String profileIndexIcon = 'assets/icons/svg/indexIcon/Profile.svg';
+  static String profileBoldIndexIcon = 'assets/icons/svg/indexIcon/ProfileBold.svg';
+  static String walletIndexIcon = 'assets/icons/svg/indexIcon/Wallet.svg';
+  static String walletBoldIndexIcon = 'assets/icons/svg/indexIcon/WalletBold.svg';
+  static String arrowRightBold = 'assets/icons/svg/boldIcon/arrowRightBold.svg';
 }
