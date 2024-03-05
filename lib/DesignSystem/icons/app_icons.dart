@@ -75,8 +75,8 @@ class AppIcons {
   static String image = 'assets/icons/svg/light(border)/Image.svg';
   static String image3 = 'assets/icons/svg/light(border)/Image 3.svg';
   static String infoSquare = 'assets/icons/svg/light(border)/Info Square.svg';
-  static String location = 'assets/icons/svg/light(border)/locationIcon.svg';
-  static String lock = 'assets/icons/svg/light(border)/lockIcon.svg';
+  static String location = 'assets/icons/svg/light(border)/Location.svg';
+  static String lock = 'assets/icons/svg/light(border)/Lock.svg';
   static String login = 'assets/icons/svg/light(border)/Login.svg';
   static String logout = 'assets/icons/svg/light(border)/Logout.svg';
   static String message = 'assets/icons/svg/light(border)/messageIcon.svg';
@@ -95,7 +95,7 @@ class AppIcons {
   static String password = 'assets/icons/svg/light(border)/Password.svg';
   static String play = 'assets/icons/svg/light(border)/Play.svg';
   static String plus = 'assets/icons/svg/light(border)/Plus.svg';
-  static String profile = 'assets/icons/svg/light(border)/profileIcon.svg';
+  static String profile = 'assets/icons/svg/light(border)/Profile.svg';
   static String scan = 'assets/icons/svg/light(border)/Scan.svg';
   static String search = 'assets/icons/svg/light(border)/Search.svg';
   static String send = 'assets/icons/svg/light(border)/Send.svg';
@@ -118,7 +118,7 @@ class AppIcons {
   static String volumeDown = 'assets/icons/svg/light(border)/Volume Down.svg';
   static String volumeOff = 'assets/icons/svg/light(border)/Volume Off.svg';
   static String volumeUp = 'assets/icons/svg/light(border)/Volume Up.svg';
-  static String wallet = 'assets/icons/svg/light(border)/walletIcon.svg';
+  static String wallet = 'assets/icons/svg/light(border)/Wallet.svg';
   static String work = 'assets/icons/svg/light(border)/Work.svg';
   static String apple = 'assets/icons/svg/vector/apple.svg';
   static String google = 'assets/icons/svg/vector/google.svg';

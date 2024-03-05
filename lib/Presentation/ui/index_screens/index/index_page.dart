@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:potea_plant_e_commerce/DesignSystem/icons/app_icons.dart';
+import 'package:potea_plant_e_commerce/Presentation/ui/index_screens/account_screen/profile_page.dart';
 import 'package:potea_plant_e_commerce/Presentation/ui/index_screens/cart_order_checkout_screens/my_cart_page.dart';
 import 'package:potea_plant_e_commerce/Presentation/ui/index_screens/home_screen/home_page.dart';
 
@@ -21,7 +22,7 @@ class _IndexPageState extends State<IndexPage> {
     MyCartPage(),
     Container(color: Colors.yellow,),
     Container(color: Colors.green,),
-    Container(color: Colors.brown,),
+    ProfilePage()
   ];
 
   //New
