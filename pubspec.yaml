@@ -203,6 +203,11 @@ flutter:
     - assets/icons/svg/indexIcon/WalletBold.svg
     - assets/icons/svg/boldIcon/arrowRightBold.svg
     - assets/icons/svg/boldIcon/starBold.svg
+    - assets/icons/svg/boldIcon/checkBoldIcon.svg
+    - assets/images/png/boxVector.png
+    - assets/images/png/deliveryVector.png
+    - assets/images/png/packVector.png
+    - assets/images/png/truckVector.png
 
   fonts:
     - family: urbanistRegular

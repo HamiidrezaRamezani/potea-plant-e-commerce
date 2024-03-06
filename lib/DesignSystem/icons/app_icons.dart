@@ -146,4 +146,5 @@ class AppIcons {
   static String walletBoldIndexIcon = 'assets/icons/svg/indexIcon/WalletBold.svg';
   static String arrowRightBold = 'assets/icons/svg/boldIcon/arrowRightBold.svg';
   static String starBold = 'assets/icons/svg/boldIcon/starBold.svg';
+  static String checkBoldIcon = 'assets/icons/svg/boldIcon/checkBoldIcon.svg';
 }

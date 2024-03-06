@@ -4,6 +4,7 @@ import 'package:potea_plant_e_commerce/DesignSystem/images/app_images.dart';
 import 'package:potea_plant_e_commerce/DesignSystem/orders/app_orders.dart';
 import 'package:potea_plant_e_commerce/DesignSystem/sheet/app_sheet.dart';
 import 'package:potea_plant_e_commerce/DesignSystem/size/app_size.dart';
+import 'package:potea_plant_e_commerce/Presentation/ui/index_screens/orders_screen/track_orders_page.dart';
 
 import '../../../../DesignSystem/colors/app_colors.dart';
 import '../../../../DesignSystem/icons/app_icons.dart';
@@ -109,7 +110,9 @@ class _MyOrdersPageState extends State<MyOrdersPage> {
                                 index,
                                 'In Delivery',
                                 'Track Order',
-                                () {}),
+                                () {
+                                  Navigator.push(context, MaterialPageRoute(builder: (context)=> const TrackOrdersPage()));
+                                }),
                             24,
                             24,
                             20,
