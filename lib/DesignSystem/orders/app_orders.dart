@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:potea_plant_e_commerce/DesignSystem/buttons/app_buttons.dart';
 import 'package:potea_plant_e_commerce/DesignSystem/colors/app_colors.dart';
 import 'package:potea_plant_e_commerce/DesignSystem/icons/app_icons.dart';
 import 'package:potea_plant_e_commerce/DesignSystem/shadow/app_shadow.dart';
@@ -9,14 +10,17 @@ import '../typography/text_style.dart';
 class AppOrders {
   AppOrders._();
 
-  static Widget myCart(
+  static Widget myOrders(
       Color backgroundColor,
       double height,
       double width,
       String image,
       String title,
       String price,
-      int number
+      int number,
+      String status,
+      String btn,
+      VoidCallback callBack
       ) {
     return Container(
       height: height,
@@ -71,7 +75,7 @@ class AppOrders {
                       borderRadius: BorderRadius.all(Radius.circular(6.0))
                     ),
                     child: Center(
-                      child: TextStyles.bodyXS('In Delivery',AppColors.primary500Color, 'semiBold' , TextAlign.center),
+                      child: TextStyles.bodyXS(status,AppColors.primary500Color, 'semiBold' , TextAlign.center),
                     ),
                   )
                 ],
@@ -82,16 +86,9 @@ class AppOrders {
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
                   TextStyles.heading6(price,AppColors.primary500Color),
-                  Container(
-                    height: 36.0,
-                    width: 100.0,
-                    decoration: BoxDecoration(
-                        color: AppColors.primary500Color,
-                        borderRadius: BorderRadius.all(Radius.circular(100.0))
-                    ),
-                    child: Center(
-                      child: TextStyles.bodyM('Track Order', AppColors.white, 'semiBold', TextAlign.center),
-                    )
+                  (btn == '')?Container():InkWell(
+                    onTap: callBack,
+                    child: AppButtons.buttonWithoutIcon(btn, 130.0, 32.0, AppColors.white, 36.0, AppColors.primary500Color)
                   ),
 
                 ],

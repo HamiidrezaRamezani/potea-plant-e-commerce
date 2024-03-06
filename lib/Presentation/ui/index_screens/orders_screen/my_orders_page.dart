@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:potea_plant_e_commerce/DesignSystem/images/app_images.dart';
 import 'package:potea_plant_e_commerce/DesignSystem/orders/app_orders.dart';
+import 'package:potea_plant_e_commerce/DesignSystem/sheet/app_sheet.dart';
 import 'package:potea_plant_e_commerce/DesignSystem/size/app_size.dart';
 
 import '../../../../DesignSystem/colors/app_colors.dart';
@@ -17,7 +18,6 @@ class MyOrdersPage extends StatefulWidget {
 }
 
 class _MyOrdersPageState extends State<MyOrdersPage> {
-
   final List<Tab> myTabs = <Tab>[
     const Tab(text: 'Active'),
     const Tab(text: 'Complete'),
@@ -32,7 +32,9 @@ class _MyOrdersPageState extends State<MyOrdersPage> {
         backgroundColor: AppColors.white,
         body: Column(
           children: [
-            const SizedBox(height: 24.0,),
+            const SizedBox(
+              height: 24.0,
+            ),
             AppPadding.paddingOnlyWidget(
                 SizedBox(
                   height: 56.0,
@@ -56,7 +58,9 @@ class _MyOrdersPageState extends State<MyOrdersPage> {
                             onTap: () {},
                             child: SvgPicture.asset(AppIcons.search),
                           ),
-                          const SizedBox(width: 20.0,),
+                          const SizedBox(
+                            width: 20.0,
+                          ),
                           InkWell(
                             onTap: () {},
                             child: SvgPicture.asset(AppIcons.moreCircle),
@@ -70,36 +74,82 @@ class _MyOrdersPageState extends State<MyOrdersPage> {
                 24.0,
                 24.0,
                 0.0),
-
             TabBar(
               tabs: myTabs,
               indicatorSize: TabBarIndicatorSize.tab,
               indicatorColor: AppColors.primary500Color,
               labelColor: AppColors.primary500Color,
               labelStyle: const TextStyle(
-                fontFamily: 'urbanistSemiBold',
-                fontWeight: FontWeight.bold,
-                fontSize: 18.0
-              ),
+                  fontFamily: 'urbanistSemiBold',
+                  fontWeight: FontWeight.bold,
+                  fontSize: 18.0),
               unselectedLabelColor: AppColors.grey500,
               unselectedLabelStyle: const TextStyle(
-                  fontFamily: 'urbanistSemiBold',
-                  fontSize: 18.0
-              ),
+                  fontFamily: 'urbanistSemiBold', fontSize: 18.0),
             ),
-            const SizedBox(height: 4.0,),
-            Expanded(child: TabBarView(
-              children: [
-                MediaQuery.removePadding(context: context, removeTop: true, child: ListView.builder(
-                    itemCount: 5,
-                    itemBuilder: (BuildContext context , int index){
-                  return AppPadding.paddingOnlyWidget(AppOrders.myCart(AppColors.white, 160.0, context.width, AppImages.plant11, 'Prayer Plant', '\$29', index), 24, 24, 20, 0.0);
-                }),),
-                Container(
-                  color: Colors.yellow,
-                )
-              ]
-            ),)
+            const SizedBox(
+              height: 4.0,
+            ),
+            Expanded(
+              child: TabBarView(children: [
+                MediaQuery.removePadding(
+                  context: context,
+                  removeTop: true,
+                  child: ListView.builder(
+                      itemCount: 5,
+                      itemBuilder: (BuildContext context, int index) {
+                        return AppPadding.paddingOnlyWidget(
+                            AppOrders.myOrders(
+                                AppColors.white,
+                                160.0,
+                                context.width,
+                                AppImages.plant11,
+                                'Prayer Plant',
+                                '\$29',
+                                index,
+                                'In Delivery',
+                                'Track Order',
+                                () {}),
+                            24,
+                            24,
+                            20,
+                            0.0);
+                      }),
+                ),
+                MediaQuery.removePadding(
+                  context: context,
+                  removeTop: true,
+                  child: ListView.builder(
+                      itemCount: 5,
+                      itemBuilder: (BuildContext context, int index) {
+                        return AppPadding.paddingOnlyWidget(
+                            AppOrders.myOrders(
+                                AppColors.white,
+                                160.0,
+                                context.width,
+                                AppImages.plant11,
+                                'Prayer Plant',
+                                '\$29',
+                                index,
+                                'Completed',
+                                'Leave a Review', () {
+                              showModalBottomSheet(
+                                  isScrollControlled: true,
+
+                                  context: context,
+                                  backgroundColor: AppColors.white,
+                                  builder: (BuildContext context) {
+                                    return AppSheet.leaveAReview(context);
+                                  });
+                            }),
+                            24,
+                            24,
+                            20,
+                            0.0);
+                      }),
+                ),
+              ]),
+            )
           ],
         ),
       ),
