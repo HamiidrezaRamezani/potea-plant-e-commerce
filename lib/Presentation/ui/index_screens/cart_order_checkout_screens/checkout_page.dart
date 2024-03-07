@@ -6,6 +6,7 @@ import 'package:potea_plant_e_commerce/DesignSystem/colors/app_colors.dart';
 import 'package:potea_plant_e_commerce/DesignSystem/images/app_images.dart';
 import 'package:potea_plant_e_commerce/DesignSystem/shadow/app_shadow.dart';
 import 'package:potea_plant_e_commerce/DesignSystem/size/app_size.dart';
+import 'package:potea_plant_e_commerce/Presentation/ui/index_screens/cart_order_checkout_screens/shpping_address_page.dart';
 
 import '../../../../DesignSystem/icons/app_icons.dart';
 import '../../../../DesignSystem/padding/app_padding.dart';
@@ -127,7 +128,12 @@ class _CheckoutPageState extends State<CheckoutPage> {
                     const SizedBox(
                       width: 12.0,
                     ),
-                    SvgPicture.asset(AppIcons.editBold),
+                    InkWell(
+                      onTap: (){
+                        Navigator.push(context, MaterialPageRoute(builder: (context)=>const ShippingAddressPage()));
+                      },
+                      child: SvgPicture.asset(AppIcons.editBold),
+                    ),
                     const SizedBox(
                       width: 20.0,
                     ),
