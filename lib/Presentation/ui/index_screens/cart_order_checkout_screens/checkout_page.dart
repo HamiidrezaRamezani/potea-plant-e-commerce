@@ -6,6 +6,7 @@ import 'package:potea_plant_e_commerce/DesignSystem/colors/app_colors.dart';
 import 'package:potea_plant_e_commerce/DesignSystem/images/app_images.dart';
 import 'package:potea_plant_e_commerce/DesignSystem/shadow/app_shadow.dart';
 import 'package:potea_plant_e_commerce/DesignSystem/size/app_size.dart';
+import 'package:potea_plant_e_commerce/Presentation/ui/index_screens/cart_order_checkout_screens/add_promo_page.dart';
 import 'package:potea_plant_e_commerce/Presentation/ui/index_screens/cart_order_checkout_screens/shpping_address_page.dart';
 
 import '../../../../DesignSystem/icons/app_icons.dart';
@@ -329,14 +330,20 @@ class _CheckoutPageState extends State<CheckoutPage> {
                   const SizedBox(
                     width: 20.0,
                   ),
-                  Container(
-                    height: 48.0,
-                    width: 48.0,
-                    decoration: BoxDecoration(
-                        shape: BoxShape.circle,
-                        color: AppColors.primary500Color),
-                    child: Center(
-                      child: SvgPicture.asset(AppIcons.addIcon),
+                  InkWell(
+                    borderRadius: BorderRadius.circular(45.0),
+                    onTap: (){
+                      Navigator.push(context, MaterialPageRoute(builder: (context)=> const AddPromoPage()));
+                    },
+                    child: Container(
+                      height: 48.0,
+                      width: 48.0,
+                      decoration: BoxDecoration(
+                          shape: BoxShape.circle,
+                          color: AppColors.primary500Color),
+                      child: Center(
+                        child: SvgPicture.asset(AppIcons.addIcon),
+                      ),
                     ),
                   )
                 ],
