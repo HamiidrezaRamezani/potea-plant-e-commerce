@@ -211,6 +211,10 @@ flutter:
     - assets/images/png/packVector.png
     - assets/images/png/truckVector.png
     - assets/images/png/promoVector.png
+    - assets/images/png/cargoVector.png
+    - assets/images/png/regularVector.png
+    - assets/images/png/expressVector.png
+    - assets/images/png/economyVector.png
 
   fonts:
     - family: urbanistRegular

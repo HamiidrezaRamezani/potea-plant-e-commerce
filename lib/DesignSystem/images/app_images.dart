@@ -51,4 +51,8 @@ class AppImages {
   static String packVector = 'assets/images/png/packVector.png';
   static String truckVector = 'assets/images/png/truckVector.png';
   static String promoVector = 'assets/images/png/promoVector.png';
+  static String cargoVector = 'assets/images/png/cargoVector.png';
+  static String regularVector = 'assets/images/png/regularVector.png';
+  static String expressVector = 'assets/images/png/expressVector.png';
+  static String economyVector = 'assets/images/png/economyVector.png';
 }

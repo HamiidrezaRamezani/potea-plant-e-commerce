@@ -7,6 +7,7 @@ import 'package:potea_plant_e_commerce/DesignSystem/images/app_images.dart';
 import 'package:potea_plant_e_commerce/DesignSystem/shadow/app_shadow.dart';
 import 'package:potea_plant_e_commerce/DesignSystem/size/app_size.dart';
 import 'package:potea_plant_e_commerce/Presentation/ui/index_screens/cart_order_checkout_screens/add_promo_page.dart';
+import 'package:potea_plant_e_commerce/Presentation/ui/index_screens/cart_order_checkout_screens/choose_shipping_page.dart';
 import 'package:potea_plant_e_commerce/Presentation/ui/index_screens/cart_order_checkout_screens/shpping_address_page.dart';
 
 import '../../../../DesignSystem/icons/app_icons.dart';
@@ -239,37 +240,43 @@ class _CheckoutPageState extends State<CheckoutPage> {
             height: 24,
           ),
           AppPadding.paddingOnlyWidget(
-              Container(
-                height: 68.0,
-                width: context.width,
-                decoration: BoxDecoration(
-                    color: AppColors.white,
-                    borderRadius: const BorderRadius.all(Radius.circular(20.0)),
-                    boxShadow: AppShadow.shadow2),
-                child: Row(
-                  children: [
-                    const SizedBox(
-                      width: 20.0,
-                    ),
-                    Image.asset(
-                      AppImages.truckVector,
-                      height: 28.0,
-                      width: 28.0,
-                    ),
-                    const SizedBox(
-                      width: 16.0,
-                    ),
-                    Expanded(
-                        child: TextStyles.heading6(
-                            'Choose Shipping Type', AppColors.grey900)),
-                    const SizedBox(
-                      width: 16.0,
-                    ),
-                    SvgPicture.asset(AppIcons.arrowRight2),
-                    const SizedBox(
-                      width: 20.0,
-                    ),
-                  ],
+              InkWell(
+                onTap: (){
+                  Navigator.push(context, MaterialPageRoute(builder: (context)=> const ChooseShippingPage()));
+                },
+                borderRadius: const BorderRadius.all(Radius.circular(20.0)),
+                child: Container(
+                  height: 68.0,
+                  width: context.width,
+                  decoration: BoxDecoration(
+                      color: AppColors.white,
+                      borderRadius: const BorderRadius.all(Radius.circular(20.0)),
+                      boxShadow: AppShadow.shadow2),
+                  child: Row(
+                    children: [
+                      const SizedBox(
+                        width: 20.0,
+                      ),
+                      Image.asset(
+                        AppImages.truckVector,
+                        height: 28.0,
+                        width: 28.0,
+                      ),
+                      const SizedBox(
+                        width: 16.0,
+                      ),
+                      Expanded(
+                          child: TextStyles.heading6(
+                              'Choose Shipping Type', AppColors.grey900)),
+                      const SizedBox(
+                        width: 16.0,
+                      ),
+                      SvgPicture.asset(AppIcons.arrowRight2),
+                      const SizedBox(
+                        width: 20.0,
+                      ),
+                    ],
+                  ),
                 ),
               ),
               24.0,
