@@ -2,6 +2,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:potea_plant_e_commerce/DesignSystem/buttons/app_buttons.dart';
+import 'package:potea_plant_e_commerce/DesignSystem/cart/app_cart.dart';
 import 'package:potea_plant_e_commerce/DesignSystem/icons/app_icons.dart';
 import 'package:potea_plant_e_commerce/DesignSystem/images/app_images.dart';
 import 'package:potea_plant_e_commerce/DesignSystem/orders/app_orders.dart';
@@ -221,6 +222,99 @@ class AppSheet {
           ],
         ),
       ),
+    );
+  }
+
+  static Widget removeFromCart(BuildContext context){
+    return Container(
+      height: context.height * 0.52,
+      decoration: const BoxDecoration(
+          color: Colors.white,
+          borderRadius: BorderRadius.only(
+            topRight: Radius.circular(40.0),
+            topLeft: Radius.circular(40.0),
+          )),
+      child: Column(
+        children: [
+          const SizedBox(
+            height: 8.0,
+          ),
+          Row(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              Container(
+                height: 3.0,
+                width: 38.0,
+                color: AppColors.grey300,
+              )
+            ],
+          ),
+          const SizedBox(
+            height: 24.0,
+          ),
+          Row(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              TextStyles.heading4('Remove From Cart?', AppColors.grey900)
+            ],
+          ),
+          const SizedBox(
+            height: 24.0,
+          ),
+          AppPadding.paddingOnlyWidget(
+              Container(
+                height: 1.0,
+                color: AppColors.grey200,
+              ),
+              24.0,
+              24.0,
+              0.0,
+              0.0),
+          const SizedBox(
+            height: 24.0,
+          ),
+          AppCart.myCart(AppColors.white, 180.0, context.width, AppImages.plant01, 'Rubber Fig Plant', '\$99', 5,false, () { }, true),
+          const SizedBox(
+            height: 24.0,
+          ),
+          AppPadding.paddingOnlyWidget(
+              Container(
+                height: 1.0,
+                color: AppColors.grey200,
+              ),
+              24.0,
+              24.0,
+              0.0,
+              0.0),
+          const SizedBox(
+            height: 24.0,
+          ),
+          AppPadding.paddingOnlyWidget(
+              Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  AppButtons.buttonWithoutIcon(
+                      'Cancel',
+                      (context.width / 2) - 36,
+                      58.0,
+                      AppColors.primary500Color,
+                      100,
+                      AppColors.primary100Color),
+                  AppButtons.buttonWithoutIcon(
+                      'Yes, Remove',
+                      (context.width / 2) - 36,
+                      58.0,
+                      AppColors.white,
+                      100,
+                      AppColors.primary500Color),
+                ],
+              ),
+              24.0,
+              24.0,
+              0.0,
+              0.0),
+        ],
+      )
     );
   }
 }

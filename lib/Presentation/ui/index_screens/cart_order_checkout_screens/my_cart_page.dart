@@ -3,7 +3,12 @@ import 'package:flutter_svg/svg.dart';
 import 'package:potea_plant_e_commerce/DesignSystem/buttons/app_buttons.dart';
 import 'package:potea_plant_e_commerce/DesignSystem/cart/app_cart.dart';
 import 'package:potea_plant_e_commerce/DesignSystem/images/app_images.dart';
+import 'package:potea_plant_e_commerce/DesignSystem/sheet/app_sheet.dart';
+import 'package:potea_plant_e_commerce/DesignSystem/sheet/app_sheet.dart';
+import 'package:potea_plant_e_commerce/DesignSystem/sheet/app_sheet.dart';
+import 'package:potea_plant_e_commerce/DesignSystem/sheet/app_sheet.dart';
 import 'package:potea_plant_e_commerce/DesignSystem/size/app_size.dart';
+import 'package:potea_plant_e_commerce/Presentation/ui/index_screens/cart_order_checkout_screens/checkout_page.dart';
 
 import '../../../../DesignSystem/colors/app_colors.dart';
 import '../../../../DesignSystem/icons/app_icons.dart';
@@ -53,10 +58,26 @@ class _MyCartPageState extends State<MyCartPage> {
                     24.0,
                     24.0,
                     0.0),
-                AppPadding.paddingOnlyWidget(AppCart.myCart(AppColors.white, 160.0, context.width, AppImages.plant11, 'Prayer Plant', '\$12', 12), 24.0, 24.0, 24.0, 0.0),
-                AppPadding.paddingOnlyWidget(AppCart.myCart(AppColors.white, 160.0, context.width, AppImages.plant11, 'Prayer Plant', '\$12', 12), 24.0, 24.0, 24.0, 0.0),
-                AppPadding.paddingOnlyWidget(AppCart.myCart(AppColors.white, 160.0, context.width, AppImages.plant11, 'Prayer Plant', '\$12', 12), 24.0, 24.0, 24.0, 0.0),
-                AppPadding.paddingOnlyWidget(AppCart.myCart(AppColors.white, 160.0, context.width, AppImages.plant11, 'Prayer Plant', '\$12', 12), 24.0, 24.0, 24.0, 0.0),
+                AppPadding.paddingOnlyWidget(AppCart.myCart(AppColors.white, 160.0, context.width, AppImages.plant11, 'Prayer Plant', '\$12', 12, true, () {
+                  showModalBottomSheet(context: context, builder: (BuildContext context){
+                    return AppSheet.removeFromCart(context);
+                  });
+                }, true), 24.0, 24.0, 24.0, 0.0),
+                AppPadding.paddingOnlyWidget(AppCart.myCart(AppColors.white, 160.0, context.width, AppImages.plant11, 'Prayer Plant', '\$12', 12, true,() {
+                  showModalBottomSheet(context: context, builder: (BuildContext context){
+                    return AppSheet.removeFromCart(context);
+                  });
+                }, true), 24.0, 24.0, 24.0, 0.0),
+                AppPadding.paddingOnlyWidget(AppCart.myCart(AppColors.white, 160.0, context.width, AppImages.plant11, 'Prayer Plant', '\$12', 12, true,() {
+                  showModalBottomSheet(context: context, builder: (BuildContext context){
+                    return AppSheet.removeFromCart(context);
+                  });
+                }, true), 24.0, 24.0, 24.0, 0.0),
+                AppPadding.paddingOnlyWidget(AppCart.myCart(AppColors.white, 160.0, context.width, AppImages.plant11, 'Prayer Plant', '\$12', 12, true,() {
+                  showModalBottomSheet(context: context, builder: (BuildContext context){
+                    return AppSheet.removeFromCart(context);
+                  });
+                }, true), 24.0, 24.0, 24.0, 0.0),
               ],
             )
           : ListView(
@@ -161,16 +182,21 @@ class _MyCartPageState extends State<MyCartPage> {
                       )),
                       Directionality(
                           textDirection: TextDirection.rtl,
-                          child: AppButtons.buttonWithIcon(
-                              'Checkout',
-                              context.width * 0.7,
-                              58.0,
-                              AppColors.white,
-                              35.0,
-                              AppColors.primary500Color,
-                              0.0,
-                              AppColors.white,
-                              AppIcons.arrowRightBold))
+                          child: InkWell(
+                            onTap: (){
+                              Navigator.push(context, MaterialPageRoute(builder: (context)=> const CheckoutPage()));
+                            },
+                            child: AppButtons.buttonWithIcon(
+                                'Checkout',
+                                context.width * 0.7,
+                                58.0,
+                                AppColors.white,
+                                35.0,
+                                AppColors.primary500Color,
+                                0.0,
+                                AppColors.white,
+                                AppIcons.arrowRightBold),
+                          ))
                     ],
                   ),
                   24.0,

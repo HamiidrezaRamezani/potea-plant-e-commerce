@@ -177,6 +177,7 @@ flutter:
     - assets/icons/svg/light(border)/Volume Up.svg
     - assets/icons/svg/light(border)/Wallet.svg
     - assets/icons/svg/light(border)/Work.svg
+    - assets/icons/svg/light(border)/addIcon.svg
     - assets/icons/svg/vector/apple.svg
     - assets/icons/svg/vector/google.svg
     - assets/icons/svg/vector/facebook.svg
@@ -204,6 +205,7 @@ flutter:
     - assets/icons/svg/boldIcon/arrowRightBold.svg
     - assets/icons/svg/boldIcon/starBold.svg
     - assets/icons/svg/boldIcon/checkBoldIcon.svg
+    - assets/icons/svg/boldIcon/editBold.svg
     - assets/images/png/boxVector.png
     - assets/images/png/deliveryVector.png
     - assets/images/png/packVector.png

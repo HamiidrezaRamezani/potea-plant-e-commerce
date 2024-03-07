@@ -17,7 +17,10 @@ class AppCart {
       String image,
       String title,
       String price,
-      int number
+      int number,
+      bool isDelete,
+      VoidCallback callBack,
+      bool numberCrease
   ) {
     return Container(
       height: height,
@@ -64,7 +67,17 @@ class AppCart {
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
-                  Container(
+                  (numberCrease == false)?Container(
+                    height: 36.0,
+                    width: 36.0,
+                    decoration: BoxDecoration(
+                        color: AppColors.silver1,
+                      shape: BoxShape.circle
+                    ),
+                    child: Center(
+                      child: TextStyles.bodyM(number.toString(), AppColors.primary500Color, 'medium', TextAlign.center),
+                    ),
+                  ):Container(
                     height: 36.0,
                     width: 100.0,
                     decoration: BoxDecoration(
@@ -87,7 +100,9 @@ class AppCart {
                       ],
                     ),
                   ),
-                  SvgPicture.asset(AppIcons.delete),
+                  (isDelete == false)?Container():InkWell(
+                    onTap: callBack,
+                    child: SvgPicture.asset(AppIcons.delete),)
 
                 ],
               ),

@@ -147,4 +147,6 @@ class AppIcons {
   static String arrowRightBold = 'assets/icons/svg/boldIcon/arrowRightBold.svg';
   static String starBold = 'assets/icons/svg/boldIcon/starBold.svg';
   static String checkBoldIcon = 'assets/icons/svg/boldIcon/checkBoldIcon.svg';
+  static String editBold = 'assets/icons/svg/boldIcon/editBold.svg';
+  static String addIcon = 'assets/icons/svg/light(border)/addIcon.svg';
 }
