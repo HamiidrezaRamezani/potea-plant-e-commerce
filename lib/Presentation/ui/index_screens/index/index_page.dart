@@ -7,6 +7,7 @@ import 'package:potea_plant_e_commerce/Presentation/ui/index_screens/home_screen
 import 'package:potea_plant_e_commerce/Presentation/ui/index_screens/orders_screen/my_orders_page.dart';
 
 import '../../../../DesignSystem/colors/app_colors.dart';
+import '../wallet_screens/wallet_page.dart';
 
 class IndexPage extends StatefulWidget {
   const IndexPage({super.key});
@@ -22,7 +23,7 @@ class _IndexPageState extends State<IndexPage> {
     HomePage(),
     MyCartPage(),
     MyOrdersPage(),
-    Container(color: Colors.green,),
+    WalletPage(),
     ProfilePage()
   ];
 

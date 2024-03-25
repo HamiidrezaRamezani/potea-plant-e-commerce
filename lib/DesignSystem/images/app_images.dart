@@ -55,4 +55,8 @@ class AppImages {
   static String regularVector = 'assets/images/png/regularVector.png';
   static String expressVector = 'assets/images/png/expressVector.png';
   static String economyVector = 'assets/images/png/economyVector.png';
+  static String creditVector = 'assets/images/png/creditVector.png';
+  static String visaLogo = 'assets/images/png/visaLogo.png';
+  static String walletVector = 'assets/images/png/walletVector.png';
+  static String barcodeVector = 'assets/images/png/barcodeVector.png';
 }

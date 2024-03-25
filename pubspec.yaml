@@ -83,7 +83,6 @@ flutter:
     - assets/icons/svg/light(border)/Add User.svg
     - assets/icons/svg/light(border)/Arrow - Down.svg
     - assets/icons/svg/light(border)/Arrow - Down Circle.svg
-    - assets/icons/svg/light(border)/Arrow - Down Square.svg
     - assets/icons/svg/light(border)/Arrow - Down 2.svg
     - assets/icons/svg/light(border)/Arrow - Down 3.svg
     - assets/icons/svg/light(border)/Arrow - Left.svg
@@ -98,7 +97,6 @@ flutter:
     - assets/icons/svg/light(border)/Arrow - Right 3.svg
     - assets/icons/svg/light(border)/Arrow - Up.svg
     - assets/icons/svg/light(border)/Arrow - Up Circle.svg
-    - assets/icons/svg/light(border)/Arrow - Up Square.svg
     - assets/icons/svg/light(border)/Arrow - Up 2.svg
     - assets/icons/svg/light(border)/Arrow - Up 3.svg
     - assets/icons/svg/light(border)/Bag.svg
@@ -192,6 +190,9 @@ flutter:
     - assets/icons/svg/boldIcon/profileIcon.svg
     - assets/icons/svg/boldIcon/walletIcon.svg
     - assets/icons/svg/boldIcon/heartIcon.svg
+    - assets/icons/svg/boldIcon/downloadBoldIcon.svg
+    - assets/icons/svg/boldIcon/arrowDownSquareBoldIcon.svg
+    - assets/icons/svg/boldIcon/arrowUpSquareBoldIcon.svg
     - assets/icons/svg/indexIcon/Bag.svg
     - assets/icons/svg/indexIcon/BagBold.svg
     - assets/icons/svg/indexIcon/Buy.svg
@@ -202,6 +203,7 @@ flutter:
     - assets/icons/svg/indexIcon/ProfileBold.svg
     - assets/icons/svg/indexIcon/Wallet.svg
     - assets/icons/svg/indexIcon/WalletBold.svg
+    - assets/icons/svg/indexIcon/copyIcon.svg
     - assets/icons/svg/boldIcon/arrowRightBold.svg
     - assets/icons/svg/boldIcon/starBold.svg
     - assets/icons/svg/boldIcon/checkBoldIcon.svg
@@ -215,6 +217,10 @@ flutter:
     - assets/images/png/regularVector.png
     - assets/images/png/expressVector.png
     - assets/images/png/economyVector.png
+    - assets/images/png/creditVector.png
+    - assets/images/png/visaLogo.png
+    - assets/images/png/walletVector.png
+    - assets/images/png/barcodeVector.png
 
   fonts:
     - family: urbanistRegular

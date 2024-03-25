@@ -9,7 +9,7 @@ class AppIcons {
   static String arrowDownCircle =
       'assets/icons/svg/light(border)/Arrow - Down Circle.svg';
   static String arrowDownSquare =
-      'assets/icons/svg/light(border)/Arrow - Down Square.svg';
+      'assets/icons/svg/light(border)/arrowDownSquareBoldIcon.svg';
   static String arrowDown2 =
       'assets/icons/svg/light(border)/Arrow - Down 2.svg';
   static String arrowDown3 =
@@ -36,7 +36,7 @@ class AppIcons {
   static String arrowUpCircle =
       'assets/icons/svg/light(border)/Arrow - Up Circle.svg';
   static String arrowUpSquare =
-      'assets/icons/svg/light(border)/Arrow - Up Square.svg';
+      'assets/icons/svg/light(border)/arrowUpSquareBoldIcon.svg';
   static String arrowUp2 = 'assets/icons/svg/light(border)/Arrow - Up 2.svg';
   static String arrowUp3 = 'assets/icons/svg/light(border)/Arrow - Up 3.svg';
   static String bag = 'assets/icons/svg/light(border)/Bag.svg';
@@ -149,4 +149,8 @@ class AppIcons {
   static String checkBoldIcon = 'assets/icons/svg/boldIcon/checkBoldIcon.svg';
   static String editBold = 'assets/icons/svg/boldIcon/editBold.svg';
   static String addIcon = 'assets/icons/svg/light(border)/addIcon.svg';
+  static String downloadBoldIcon = 'assets/icons/svg/boldIcon/downloadBoldIcon.svg';
+  static String arrowDownSquareBoldIcon = 'assets/icons/svg/boldIcon/arrowDownSquareBoldIcon.svg';
+  static String arrowUpSquareBoldIcon = 'assets/icons/svg/boldIcon/arrowUpSquareBoldIcon.svg';
+  static String copyIcon = 'assets/icons/svg/indexIcon/copyIcon.svg';
 }
