@@ -153,4 +153,6 @@ class AppIcons {
   static String arrowDownSquareBoldIcon = 'assets/icons/svg/boldIcon/arrowDownSquareBoldIcon.svg';
   static String arrowUpSquareBoldIcon = 'assets/icons/svg/boldIcon/arrowUpSquareBoldIcon.svg';
   static String copyIcon = 'assets/icons/svg/indexIcon/copyIcon.svg';
+  static String visaIcon = 'assets/icons/svg/boldIcon/visaIcon.svg';
+  static String paypalIcon = 'assets/icons/svg/boldIcon/paypalIcon.svg';
 }

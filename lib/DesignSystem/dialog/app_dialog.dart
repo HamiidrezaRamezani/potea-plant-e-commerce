@@ -3,7 +3,6 @@ import 'package:lottie/lottie.dart';
 
 import '../animations/lotties/app_lottie_animations.dart';
 import '../colors/app_colors.dart';
-import '../images/app_images.dart';
 import '../typography/text_style.dart';
 
 class AppDialog{

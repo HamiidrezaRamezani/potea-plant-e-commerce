@@ -208,6 +208,8 @@ flutter:
     - assets/icons/svg/boldIcon/starBold.svg
     - assets/icons/svg/boldIcon/checkBoldIcon.svg
     - assets/icons/svg/boldIcon/editBold.svg
+    - assets/icons/svg/boldIcon/visaIcon.svg
+    - assets/icons/svg/boldIcon/paypalIcon.svg
     - assets/images/png/boxVector.png
     - assets/images/png/deliveryVector.png
     - assets/images/png/packVector.png

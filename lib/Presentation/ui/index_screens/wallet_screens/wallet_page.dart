@@ -4,6 +4,7 @@ import 'package:potea_plant_e_commerce/DesignSystem/buttons/app_buttons.dart';
 import 'package:potea_plant_e_commerce/DesignSystem/images/app_images.dart';
 import 'package:potea_plant_e_commerce/DesignSystem/size/app_size.dart';
 import 'package:potea_plant_e_commerce/DesignSystem/wallet/app_wallets.dart';
+import 'package:potea_plant_e_commerce/Presentation/ui/index_screens/wallet_screens/top_up_screens/top_up_wallet_page.dart';
 import 'package:potea_plant_e_commerce/Presentation/ui/index_screens/wallet_screens/transaction_screens/transaction_history_page.dart';
 
 import '../../../../DesignSystem/colors/app_colors.dart';
@@ -110,7 +111,12 @@ class _WalletPageState extends State<WalletPage> {
                             mainAxisAlignment: MainAxisAlignment.spaceBetween,
                             children: [
                               TextStyles.heading1('\$9,449', AppColors.white),
-                              AppButtons.buttonWithIcon('Top Up', 120, 38, AppColors.primary500Color, 100.0, AppColors.white, 0.0, AppColors.white, AppIcons.downloadBoldIcon)
+                              InkWell(
+                                onTap: (){
+                                  Navigator.push(context, MaterialPageRoute(builder: (context)=> const TopUpWalletPage()));
+                                },
+                                child: AppButtons.buttonWithIcon('Top Up', 120, 38, AppColors.primary500Color, 100.0, AppColors.white, 0.0, AppColors.white, AppIcons.downloadBoldIcon),
+                              )
                             ],
                           )
                         ],)
