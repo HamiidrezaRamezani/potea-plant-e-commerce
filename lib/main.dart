@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:potea_plant_e_commerce/Presentation/ui/index_screens/index/index_page.dart';
+import 'package:potea_plant_e_commerce/Presentation/ui/starter_screens/splash_screen.dart';
+
+import 'Presentation/ui/index_screens/index/index_page.dart';
 
 void main() {
   runApp(const MyApp());

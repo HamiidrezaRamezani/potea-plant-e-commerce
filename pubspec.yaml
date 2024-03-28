@@ -223,6 +223,7 @@ flutter:
     - assets/images/png/visaLogo.png
     - assets/images/png/walletVector.png
     - assets/images/png/barcodeVector.png
+    - assets/images/png/us.png
 
   fonts:
     - family: urbanistRegular

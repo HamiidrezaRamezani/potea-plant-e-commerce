@@ -59,4 +59,5 @@ class AppImages {
   static String visaLogo = 'assets/images/png/visaLogo.png';
   static String walletVector = 'assets/images/png/walletVector.png';
   static String barcodeVector = 'assets/images/png/barcodeVector.png';
+  static String usVector = 'assets/images/png/us.png';
 }

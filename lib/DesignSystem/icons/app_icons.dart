@@ -79,7 +79,7 @@ class AppIcons {
   static String lock = 'assets/icons/svg/light(border)/Lock.svg';
   static String login = 'assets/icons/svg/light(border)/Login.svg';
   static String logout = 'assets/icons/svg/light(border)/Logout.svg';
-  static String message = 'assets/icons/svg/light(border)/messageIcon.svg';
+  static String message = 'assets/icons/svg/light(border)/message.svg';
   static String moreCircle = 'assets/icons/svg/light(border)/More Circle.svg';
   static String moreSquare = 'assets/icons/svg/light(border)/More Square.svg';
   static String notification =

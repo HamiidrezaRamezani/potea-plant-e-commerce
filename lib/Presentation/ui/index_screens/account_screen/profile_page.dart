@@ -8,6 +8,7 @@ import '../../../../DesignSystem/icons/app_icons.dart';
 import '../../../../DesignSystem/images/app_images.dart';
 import '../../../../DesignSystem/padding/app_padding.dart';
 import '../../../../DesignSystem/typography/text_style.dart';
+import 'edit_profile_page.dart';
 
 class ProfilePage extends StatefulWidget {
   const ProfilePage({super.key});
@@ -130,13 +131,18 @@ class _ProfilePageState extends State<ProfilePage> {
               20.0,
               0.0),
           AppPadding.paddingOnlyWidget(
-              Row(
-              children: [
-                SvgPicture.asset(AppIcons.profile, color: AppColors.grey900,),
-                const SizedBox(width: 16.0,),
-                Expanded(child: TextStyles.bodyX('Edit Profile', AppColors.grey900, 'semiBold', TextAlign.left),),
-                SvgPicture.asset(AppIcons.arrowRight2),
-              ],
+              InkWell(
+                onTap: (){
+                  Navigator.push(context, MaterialPageRoute(builder: (context)=> const EditProfilePage()));
+                },
+                child: Row(
+                children: [
+                  SvgPicture.asset(AppIcons.profile, color: AppColors.grey900,),
+                  const SizedBox(width: 16.0,),
+                  Expanded(child: TextStyles.bodyX('Edit Profile', AppColors.grey900, 'semiBold', TextAlign.left),),
+                  SvgPicture.asset(AppIcons.arrowRight2),
+                ],
+                ),
               ),
               24.0,
               24.0,
